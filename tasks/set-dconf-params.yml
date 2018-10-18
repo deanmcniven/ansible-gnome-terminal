@@ -1,0 +1,78 @@
+---
+- name: Disable menubar
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/default-show-menubar"
+    value: "false"
+
+- name: Set profile name
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}visible-name"
+    value: "'my-profile'"
+
+- name: Set foreground-color
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}foreground-color"
+    value: "'rgb(255,142,30)'"
+
+- name: Set palette
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}palette"
+    value: "['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']"
+
+- name: Set custom-command
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}custom-command"
+    value: "'tmux'"
+
+- name: Set use-custom-command
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-custom-command"
+    value: "true"
+
+- name: Set use-theme-colors
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-theme-colors"
+    value: "false"
+
+- name: Set scrollback-unlimited
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}scrollback-unlimited"
+    value: "true"
+
+- name: Set background-color
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}background-color"
+    value: "'rgb(0,0,0)'"
+
+- name: Set scrollbar-policy
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}scrollbar-policy"
+    value: "'never'"
+
+- name: Set use-transparent-background
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-transparent-background"
+    value: "true"
+
+- name: Set use-theme-transparency
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}use-theme-transparency"
+    value: "false"
+
+- name: Set background-transparency-percent
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}background-transparency-percent"
+    value: "14"
