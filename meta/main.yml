@@ -1,5 +1,10 @@
 ---
-dependencies:
-  - name: set-user-facts
-    src: https://github.com/deanmcniven/ansible-set-user-facts.git
-    version: origin/master
+galaxy_info:
+  author: Dean McNiven
+  description: ansible-gnome-terminal
+  license: MIT
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+dependencies: []
