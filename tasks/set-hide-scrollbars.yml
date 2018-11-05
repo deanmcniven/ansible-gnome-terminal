@@ -1,0 +1,8 @@
+---
+- name: Set scrollbar-policy
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}scrollbar-policy"
+    value: "'never'"
+  when: gnome_terminal_hide_scrollbars
+

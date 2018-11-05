@@ -1,0 +1,7 @@
+---
+- name: Set profile name
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}visible-name"
+    value: "'my-profile'"
+

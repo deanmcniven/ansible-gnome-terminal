@@ -1,0 +1,8 @@
+---
+- name: Disable menubar
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/default-show-menubar"
+    value: "false"
+  when: gnome_terminal_hide_menubar
+

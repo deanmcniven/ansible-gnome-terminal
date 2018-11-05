@@ -1,0 +1,7 @@
+---
+gnome_terminal_hide_menubar: true
+gnome_terminal_hide_scrollbars: true
+gnome_terminal_set_colour_theme: true
+gnome_terminal_start_in_tmux: true
+gnome_terminal_set_unlimited_scrollback: true
+

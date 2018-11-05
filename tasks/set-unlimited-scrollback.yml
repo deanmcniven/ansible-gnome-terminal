@@ -1,0 +1,8 @@
+---
+- name: Set scrollback-unlimited
+  become: false
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/{{profileid}}scrollback-unlimited"
+    value: "true"
+  when: gnome_terminal_set_unlimited_scrollback
+

@@ -1,3 +1,9 @@
 ---
 - include: facts.yml
-- include: set-dconf-params.yml
+- include: create-profile.yml
+- include: hide-menubar.yml
+- include: set-hide-scrollbars.yml
+- include: set-terminal-colours.yml
+- include: set-tmux-entrypoint.yml
+- include: set-unlimited-scrollback.yml
+
